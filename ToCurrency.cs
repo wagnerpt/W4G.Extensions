@@ -38,7 +38,6 @@ namespace W4G.Extensions
             double ret = value;
             if (truncValue)
                 ret = double.Truncate(Math.Pow(10, decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits) * value) / Math.Pow(10, decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits);
-
             string mask = $"C{decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits}";
             return ret.ToString(mask, cultureInfo);
         }
