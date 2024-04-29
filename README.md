@@ -1,62 +1,32 @@
 # W4G.Extensions
 
-Este repositÛrio contÈm uma coleÁ„o de extensıes para facilitar o desenvolvimento em diversas plataformas. 
+Este reposit√≥rio cont√©m uma cole√ß√£o de extens√µes para facilitar o desenvolvimento em diversas plataformas. 
 
-Atualmente em construÁ„o, o objetivo È fornecer uma biblioteca de recursos ˙teis e comuns para agilizar o processo de desenvolvimento.
+Atualmente em constru√ß√£o, o objetivo √© fornecer uma biblioteca de recursos √∫teis e comuns para agilizar o processo de desenvolvimento.
 
-## Recursos DisponÌveis (em constante atualizaÁ„o)
+## Recursos Dispon√≠veis (em constante atualiza√ß√£o)
 
-- **ToCurrency**: 
-- Extensıes para trabalhar com formaÁ„o de valores monet·rios.
-- Aplica-se a: tipos int, double ou decimal.
+### Extens√µes para N√∫meros
+- **[ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency(...))**: Extens√µes para trabalhar com forma√ß√£o de valores monet√°rios. Aplica-se a: tipos int, double ou decimal.
+
+### Extens√µes para Strings
+- **RetornarSomenteNumero**: Retorna somente os n√∫meros contido em uma string.
+- **RetornarCNPJCPFSemDigito**: Retorna o CNPJ ou CPF sem os d√≠gitos verificadores.  
+- **RetornarCNPJCPFDigito**: Retorna os d√≠gitos verificadores do CNPJ ou CPF.                
+- **RemoveAcentuacao**: Remove acentos de uma string.
 
 ## Como Utilizar
 
-1. **InstalaÁ„o via NuGet**: VocÍ pode instalar as extensıes via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:
-1. **InstalaÁ„o via NuGet**: VocÍ pode instalar as extensıes via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:
+**Instala√ß√£o via NuGet**: Voc√™ pode instalar as extens√µes via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:
 
 ```bash	
-Install-Package W4G.Extensions
-```
-2. **Exemplos de UtilizaÁ„o**:
-
-* ToCurrency:
-
-```csharp
-using W4G.Extensions;
-class Program
-{
-    static void Main()
-    {
-        double valor = 12345.6789;
-
-        Console.WriteLine("Valor Informado: " + valor);
-        Console.WriteLine();
-        Console.WriteLine("Valor formatado: " + valor.ToCurrency());
-        Console.WriteLine("Valor formatado sem arredondamento: " + valor.ToCurrency(truncValue: true));
-        Console.WriteLine("Valor formatado sem casas decimais): " + valor.ToCurrency(0));
-        Console.WriteLine("Valor formatado com 3 casas decimais: " + valor.ToCurrency(3));
-        Console.WriteLine("Valor formatado com 3 casas decimais e sem arredondamento: " + valor.ToCurrency(3, true));
-        Console.WriteLine("Valor formatado usando a moeda (US)): " + valor.ToCurrency(cultureName: "en-US"));
-    }
-}
-```
-Output:
-```bash
-Valor Informado: 12345,6789
-
-Valor formatado: R$ 12.345,68
-Valor formatado sem arredondamento: R$ 12.345,67
-Valor formatado sem casas decimais): R$ 12.346
-Valor formatado com 3 casas decimais: R$ 12.345,679
-Valor formatado com 3 casas decimais e sem arredondamento: R$ 12.345,678
-Valor formatado usando a moeda (US)): $12,345.68
+dotnet add package W4G.Extensions
 ```
 
 ## Contribuindo
-ContribuiÁıes s„o bem-vindas! Sinta-se ‡ vontade para abrir issues para relatar bugs, sugerir novas funcionalidades ou enviar pull requests com melhorias.
+Contribui√ß√µes s√£o bem-vindas! Sinta-se √† vontade para abrir issues para relatar bugs, sugerir novas funcionalidades ou enviar pull requests com melhorias.
 
-## LicenÁa
-Este projeto È licenciado sob a MIT License.
+## Licen√ßa
+Este projeto √© licenciado sob a MIT License.
 
-Este README.md fornece uma vis„o geral do repositÛrio, lista os recursos disponÌveis, explica como instalar e usar as extensıes, e tambÈm encoraja contribuiÁıes.
+Este README.md fornece uma vis√£o geral do reposit√≥rio, lista os recursos dispon√≠veis, explica como instalar e usar as extens√µes, e tamb√©m encoraja contribui√ß√µes.
