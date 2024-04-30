@@ -1,32 +1,48 @@
 # W4G.Extensions
 
-Este repositÃ³rio contÃ©m uma coleÃ§Ã£o de extensÃµes para facilitar o desenvolvimento em diversas plataformas. 
+Este repositório contém uma coleção de extensões para facilitar o desenvolvimento em diversas plataformas. 
 
-Atualmente em construÃ§Ã£o, o objetivo Ã© fornecer uma biblioteca de recursos Ãºteis e comuns para agilizar o processo de desenvolvimento.
+Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos úteis e comuns para agilizar o processo de desenvolvimento.
 
-## Recursos DisponÃ­veis (em constante atualizaÃ§Ã£o)
+## Recursos Disponíveis (em constante atualização)
 
-### ExtensÃµes para NÃºmeros
-- **[ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency(...))**: ExtensÃµes para trabalhar com formaÃ§Ã£o de valores monetÃ¡rios. Aplica-se a: tipos int, double ou decimal.
+### Extensões para Números
+- **[ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency)**: Formatação de valores monetários. Aplica-se a: tipos int, double ou decimal.
+- **[ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR)**: Retorna o número por extenso em português. Aplica-se a: tipos int, long, double ou decimal.
+- **[ToExtensionMoneyBRL](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionMoneyBRL)**: Retorna o valor por extenso em reais (R$). Aplica-se a: tipos int, long, double ou decimal.
 
-### ExtensÃµes para Strings
-- **RetornarSomenteNumero**: Retorna somente os nÃºmeros contido em uma string.
-- **RetornarCNPJCPFSemDigito**: Retorna o CNPJ ou CPF sem os dÃ­gitos verificadores.  
-- **RetornarCNPJCPFDigito**: Retorna os dÃ­gitos verificadores do CNPJ ou CPF.                
-- **RemoveAcentuacao**: Remove acentos de uma string.
+### Extensões para Strings
+- **[OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers)**: Retorna somente os números contido em uma string.
+- **[NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents)**: Remove acentos e "ç" de uma string.
 
 ## Como Utilizar
 
-**InstalaÃ§Ã£o via NuGet**: VocÃª pode instalar as extensÃµes via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:
+**Instalação via NuGet**: Você pode instalar as extensões via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:
 
 ```bash	
 dotnet add package W4G.Extensions
 ```
 
+Depois de instalar o pacote, você pode usar as extensões em seu código. Veja um exemplo de uso do método ToCurrency():
+
+```csharp
+using W4G.Extensions;
+
+class Program
+{
+	static void Main(string[] args)
+	{
+		double value = 1234.56;
+		string formattedValue = value.ToCurrency(); // R$ 1.234,56
+		Console.WriteLine(formattedValue);
+	}
+}
+```
+
 ## Contribuindo
-ContribuiÃ§Ãµes sÃ£o bem-vindas! Sinta-se Ã  vontade para abrir issues para relatar bugs, sugerir novas funcionalidades ou enviar pull requests com melhorias.
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para relatar bugs, sugerir novas funcionalidades ou enviar pull requests com melhorias.
 
-## LicenÃ§a
-Este projeto Ã© licenciado sob a MIT License.
+## Licença
+Este projeto é licenciado sob a MIT License.
 
-Este README.md fornece uma visÃ£o geral do repositÃ³rio, lista os recursos disponÃ­veis, explica como instalar e usar as extensÃµes, e tambÃ©m encoraja contribuiÃ§Ãµes.
+Este README.md fornece uma visão geral do repositório, lista os recursos disponíveis, explica como instalar e usar as extensões, e também encoraja contribuições.

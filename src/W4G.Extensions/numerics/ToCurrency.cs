@@ -23,6 +23,20 @@ namespace W4G.Extensions
         }
 
         /// <summary>
+        /// Formata um valor long em moeda.
+        /// </summary>
+        /// <param name="value">Valor long a ser formatado</param>
+        /// <param name="decimalPlaces">Informe o número de casas decimais, se não informado assume o padrão da moeda.</param>
+        /// <param name="cultureName">Informe o nome da cultura. Ex. pt-br, en-US. Se não informado assume o padrão conforme o CurrentUICulture.</param>
+        /// <returns>Retorna a string no formato de moeda</returns>
+        public static string ToCurrency(this long value, int? decimalPlaces = null, string? cultureName = null)
+        {
+            CultureInfo cultureInfo = new CultureInfo(cultureName ?? CultureInfo.CurrentUICulture.Name);
+            string mask = $"C{decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits}";
+            return value.ToString(mask, cultureInfo);
+        }
+
+        /// <summary>
         /// Formata um valor double em moeda.
         /// </summary>
         /// <param name="value">Valor double a ser formatado</param>
@@ -37,7 +51,7 @@ namespace W4G.Extensions
             //Ajusta o valor para o número de casas decimais informado e a utilização de truncamento
             double ret = value;
             if (truncValue)
-                ret = double.Truncate(Math.Pow(10, decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits) * value) / Math.Pow(10, decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits);
+                ret = Math.Truncate(Math.Pow(10, decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits) * value) / Math.Pow(10, decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits);
             string mask = $"C{decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits}";
             return ret.ToString(mask, cultureInfo);
         }
