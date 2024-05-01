@@ -1,0 +1,15 @@
+﻿v1.0.2
+======
+  * Inclusão de testes unitários
+  * Inclusão do método `ToExtensionMoney` para converter valores para moeda com extensão
+  * Inclusão do método `ToExtensionValue` para converter valores para extensão
+  
+v1.0.1
+======
+  * Inclusão do método `OnlyNumbers` para remover caracteres não numéricos
+  * Inclusão do Método `NoAccents` para remover acentos
+
+v1.0.0
+======
+  * Versão inicial do projeto.
+  * Inclusão do método `ToCurrency` para converter valores para moeda

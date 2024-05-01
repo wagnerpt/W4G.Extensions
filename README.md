@@ -8,12 +8,12 @@ Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos úteis
 
 ### Extensões para Números
 - **[ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency)**: Formatação de valores monetários. Aplica-se a: tipos int, double ou decimal.
-- **[ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR)**: Retorna o número por extenso em português. Aplica-se a: tipos int, long, double ou decimal.
 - **[ToExtensionMoneyBRL](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionMoneyBRL)**: Retorna o valor por extenso em reais (R$). Aplica-se a: tipos int, long, double ou decimal.
+- **[ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR)**: Retorna o número por extenso em português. Aplica-se a: tipos int, long, double ou decimal.
 
 ### Extensões para Strings
-- **[OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers)**: Retorna somente os números contido em uma string.
 - **[NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents)**: Remove acentos e "ç" de uma string.
+- **[OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers)**: Retorna somente os números contido em uma string.
 
 ## Como Utilizar
 
