@@ -1,29 +1,29 @@
 # W4G.Extensions
 
-Este repositório contém uma coleção de extensões para facilitar o desenvolvimento em diversas plataformas. 
+Este repositÃ³rio contÃ©m uma coleÃ§Ã£o de extensÃµes para facilitar o desenvolvimento em diversas plataformas. 
 
-Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos úteis e comuns para agilizar o processo de desenvolvimento.
+Atualmente em construÃ§Ã£o, o objetivo Ã© fornecer uma biblioteca de recursos Ãºteis e comuns para agilizar o processo de desenvolvimento.
 
-## Recursos Disponíveis (em constante atualização)
+## Recursos DisponÃ­veis (em constante atualizaÃ§Ã£o)
 
-### Extensões para Números
-- **[ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency)**: Formatação de valores monetários. Aplica-se a: tipos int, double ou decimal.
+### ExtensÃµes para NÃºmeros
+- **[ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency)**: FormataÃ§Ã£o de valores monetÃ¡rios. Aplica-se a: tipos int, double ou decimal.
 - **[ToExtensionMoneyBRL](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionMoneyBRL)**: Retorna o valor por extenso em reais (R$). Aplica-se a: tipos int, long, double ou decimal.
-- **[ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR)**: Retorna o número por extenso em português. Aplica-se a: tipos int, long, double ou decimal.
+- **[ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR)**: Retorna o nÃºmero por extenso em portuguÃªs. Aplica-se a: tipos int, long, double ou decimal.
 
-### Extensões para Strings
-- **[NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents)**: Remove acentos e "ç" de uma string.
-- **[OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers)**: Retorna somente os números contido em uma string.
+### ExtensÃµes para Strings
+- **[NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents)**: Remove acentos e "Ã§" de uma string.
+- **[OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers)**: Retorna somente os nÃºmeros contido em uma string.
 
 ## Como Utilizar
 
-**Instalação via NuGet**: Você pode instalar as extensões via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:
+**InstalaÃ§Ã£o via NuGet**: VocÃª pode instalar as extensÃµes via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:
 
 ```bash	
 dotnet add package W4G.Extensions
 ```
 
-Depois de instalar o pacote, você pode usar as extensões em seu código. Veja um exemplo de uso do método ToCurrency():
+Depois de instalar o pacote, vocÃª pode usar as extensÃµes em seu cÃ³digo. Veja um exemplo de uso do mÃ©todo ToCurrency():
 
 ```csharp
 using W4G.Extensions;
@@ -40,9 +40,9 @@ class Program
 ```
 
 ## Contribuindo
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues para relatar bugs, sugerir novas funcionalidades ou enviar pull requests com melhorias.
+ContribuiÃ§Ãµes sÃ£o bem-vindas! Sinta-se Ã  vontade para abrir issues para relatar bugs, sugerir novas funcionalidades ou enviar pull requests com melhorias.
 
-## Licença
-Este projeto é licenciado sob a MIT License.
+## LicenÃ§a
+Este projeto Ã© licenciado sob a MIT License.
 
-Este README.md fornece uma visão geral do repositório, lista os recursos disponíveis, explica como instalar e usar as extensões, e também encoraja contribuições.
+Este README.md fornece uma visÃ£o geral do repositÃ³rio, lista os recursos disponÃ­veis, explica como instalar e usar as extensÃµes, e tambÃ©m encoraja contribuiÃ§Ãµes.
