@@ -1,5 +1,9 @@
 # W4G.Extensions
 
+![C#](https://img.shields.io/badge/.NET%206.0-00F?style=for-the-badge&logoColor=FFF&logo=DotNet)
+![C#](https://img.shields.io/badge/.NET%207.0-00F?style=for-the-badge&logoColor=FFF&logo=DotNet)
+![C#](https://img.shields.io/badge/.NET%208.0-00F?style=for-the-badge&logoColor=FFF&logo=DotNet)
+
 Este repositório contém uma coleção de extensões para facilitar o desenvolvimento em diversas plataformas. 
 
 Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos úteis e comuns para agilizar o processo de desenvolvimento.
