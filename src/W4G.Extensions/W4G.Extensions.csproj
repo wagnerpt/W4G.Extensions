@@ -12,7 +12,7 @@
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/wagnerpt/W4G.Extensions</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>NuGet;.NET 8;Classlib;GitHub;Actions</PackageTags>
+    <PackageTags>Classlib;.NET;GitHub;Extensions</PackageTags>
     <Authors>W4G</Authors>
     <AssemblyVersion>1.0.2</AssemblyVersion>
     <FileVersion>1.0.2</FileVersion>
