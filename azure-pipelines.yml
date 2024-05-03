@@ -26,5 +26,5 @@ steps:
 - script: dotnet pack $(PATH_PROJECT) -c $(buildConfiguration) -o out
   displayName: 'dotnet pack'
 
-- script: dotnet nuget push out\*.nupkg --api-key $(NUGET_API_KEY) --source $(NUGET_SERVER) --skip-duplicate
+- script: dotnet nuget push out/*.nupkg --api-key $(NUGET_API_KEY) --source $(NUGET_SERVER) --skip-duplicate
   displayName: 'nuget push'
