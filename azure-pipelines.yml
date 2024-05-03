@@ -17,7 +17,7 @@ steps:
 - script: dotnet restore
   displayName: 'dotnet restore'
 
-- script: dotnet build --configuration $(buildConfiguration) --no-restore
+- script: dotnet build --no-restore
   displayName: 'dotnet build $(buildConfiguration)'
 
 - script: dotnet test --no-build --verbosity normal
