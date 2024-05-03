@@ -17,13 +17,13 @@ steps:
 - script: dotnet restore
   displayName: 'dotnet restore'
 
-- script: dotnet build --no-restore
+- script: dotnet build --configuration $(buildConfiguration) --no-restore
   displayName: 'dotnet build $(buildConfiguration)'
 
 #- script: dotnet test --no-build --verbosity normal
 #  displayName: 'dotnet test'
 
-- script: dotnet pack $(PATH_PROJECT) -c Release -o out
+- script: dotnet pack $(PATH_PROJECT) -c $(buildConfiguration) -o out
   displayName: 'dotnet pack'
 
 - script: dotnet nuget push out\*.nupkg --api-key $(NUGET_API_KEY) --source $(NUGET_SERVER) --skip-duplicate
