@@ -8,7 +8,7 @@ namespace W4G.Test
     {
         public ToExtensionMoneyTest()
         {
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+            CultureInfo.CurrentCulture = new CultureInfo("pt-BR");
         }
 
         private void ToExtensionMoney(string expected, int value) => Assert.AreEqual(expected, value.ToExtensionMoneyBRL());

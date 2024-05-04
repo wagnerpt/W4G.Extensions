@@ -49,26 +49,6 @@ public static class CpfExtensions
             return false;
 
         return cpf == cpf.CpfCorrect();
-
-        //int[] multiplicadores = { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
-        //int soma = 0;
-
-        ////Valida o primeiro dígito verificador
-        //for (int i = 0; i < 9; i++)
-        //    soma += int.Parse(cpf[i].ToString()) * multiplicadores[i];
-        //int resto = soma % 11;
-        //int digitoVerificador1 = resto < 2 ? 0 : 11 - resto;
-        //if (int.Parse(cpf[9].ToString()) != digitoVerificador1)
-        //    return false;
-
-        //soma = 0;
-
-        ////Valida o segundo dígito verificador
-        //for (int i = 0; i < 10; i++)
-        //    soma += int.Parse(cpf[i].ToString()) * multiplicadores[i + 1];
-        //resto = soma % 11;
-        //int digitoVerificador2 = resto < 2 ? 0 : 11 - resto;
-        //return int.Parse(cpf[10].ToString()) == digitoVerificador2;
     }
 
     public static string CpfCorrect(this string CPF)

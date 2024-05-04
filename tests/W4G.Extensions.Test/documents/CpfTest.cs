@@ -9,26 +9,26 @@ public class CpfTest
     [TestMethod]
     public void CpfFormat()
     {
-        Assert.AreEqual("265.308.318-35", "26530831835".CpfFormat());
-        Assert.ThrowsException<ArgumentException>(() => "26530831836".CpfFormat());
+        Assert.AreEqual("704.676.250-34", "70467625034".CpfFormat());
+        Assert.ThrowsException<ArgumentException>(() => "70467625035".CpfFormat());
     }
 
     [TestMethod]
     public void CpfIsValid()
     {
-        Assert.AreEqual(true, "265.308.318-35".CpfIsValid());
-        Assert.AreEqual(true, "26530831835".CpfIsValid());
-        Assert.AreEqual(false, "26530831836".CpfIsValid());
+        Assert.AreEqual(true, "704.676.250-34".CpfIsValid());
+        Assert.AreEqual(true, "70467625034".CpfIsValid());
+        Assert.AreEqual(false, "70467625035".CpfIsValid());
         Assert.AreEqual(false, "999999999999".CpfIsValid());
-        Assert.AreEqual(false, "26530831835A".CpfIsValid());
+        Assert.AreEqual(false, "70467625034A".CpfIsValid());
     }
 
     [TestMethod]
     public void CpfCorrect()
     {
-        Assert.AreEqual("26530831835", "26530831835".CpfCorrect());
-        Assert.AreEqual("26530831835", "265.308.318-35".CpfCorrect());
-        Assert.AreEqual("26530831835", "26530831836".CpfCorrect());
-        Assert.AreEqual("26530831835", "26530831835A".CpfCorrect());
+        Assert.AreEqual("70467625034", "70467625034".CpfCorrect());
+        Assert.AreEqual("70467625034", "704.676.250-34".CpfCorrect());
+        Assert.AreEqual("70467625034", "70467625035".CpfCorrect());
+        Assert.AreEqual("70467625034", "70467625034A".CpfCorrect());
     }
 }
