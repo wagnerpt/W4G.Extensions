@@ -1,4 +1,9 @@
-﻿v1.0.3
+﻿v1.0.4
+======
+  * Inclusão do método `ToJson` para converter um objeto em uma string JSON
+  * Inclusão do Método `ToXml` para converter um objeto em uma string XML
+  
+v1.0.3
 ======
   * Inclusão de métodos para CPF (validação e formatação)
   * Inclusão de métodos para CNPJ (validação e formatação)
