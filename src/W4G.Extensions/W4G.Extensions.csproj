@@ -14,9 +14,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Classlib;.NET;GitHub;Extensions</PackageTags>
     <Authors>W4G</Authors>
-    <AssemblyVersion>1.0.2</AssemblyVersion>
-    <FileVersion>1.0.2</FileVersion>
-    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.3</AssemblyVersion>
+    <FileVersion>1.0.3</FileVersion>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
