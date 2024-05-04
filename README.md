@@ -17,6 +17,17 @@ Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos ú
 - **[NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents)**: Remove acentos e "ç" de uma string.
 - **[OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers)**: Retorna somente os números contido em uma string.
 
+### Extensões para documentos
+#### CPF
+- **[CpfIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfIsValid)**: Validação de CPF.
+- **[CpfCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfCorrect)**: Devolve o CPF informado com os dígitos corretos.
+- **[CpfFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfFormat)**: Aplica máscara ao CPF informado.
+#### CNPJ
+- **[CnpjIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjIsValid)**: Validação de CNPJ.
+- **[CnpjCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjCorrect)**: Devolve o CNPJ informado com os dígitos corretos.
+- **[CnpjFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjFormat)**: Aplica máscara ao CNPJ informado.
+
+
 ## Como Utilizar
 
 **Instalação via NuGet**: Você pode instalar as extensões via NuGet Package Manager executando o seguinte comando no Console do Gerenciador de Pacotes:

@@ -1,4 +1,9 @@
-﻿v1.0.2
+﻿v1.0.3
+======
+  * Inclusão de métodos para CPF (validação e formatação)
+  * Inclusão de métodos para CNPJ (validação e formatação)
+  
+v1.0.2
 ======
   * Inclusão de testes unitários
   * Inclusão do método `ToExtensionMoney` para converter valores para moeda com extensão
