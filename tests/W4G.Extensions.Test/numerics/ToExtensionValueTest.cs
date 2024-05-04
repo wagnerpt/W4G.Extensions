@@ -8,7 +8,7 @@ namespace W4G.Test
     {
         public ToExtensionValueTest()
         {
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+            CultureInfo.CurrentCulture = new CultureInfo("pt-BR");
         }
 
         [TestMethod]
