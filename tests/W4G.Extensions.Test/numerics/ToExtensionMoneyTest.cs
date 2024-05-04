@@ -1,3 +1,4 @@
+using System.Globalization;
 using W4G.Extensions;
 
 namespace W4G.Test
@@ -5,6 +6,11 @@ namespace W4G.Test
     [TestClass]
     public class ToExtensionMoneyTest
     {
+        public ToExtensionMoneyTest()
+        {
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+        }
+
         private void ToExtensionMoney(string expected, int value) => Assert.AreEqual(expected, value.ToExtensionMoneyBRL());
         private void ToExtensionMoney(string expected, long value) => Assert.AreEqual(expected, value.ToExtensionMoneyBRL());
         private void ToExtensionMoney(string expected, double value) => Assert.AreEqual(expected, value.ToExtensionMoneyBRL());
