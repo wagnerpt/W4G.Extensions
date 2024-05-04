@@ -20,8 +20,8 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration) --no-restore
   displayName: 'dotnet build $(buildConfiguration)'
 
-#- script: dotnet test --no-build --verbosity normal
-#  displayName: 'dotnet test'
+- script: dotnet test --no-build --verbosity normal
+  displayName: 'dotnet test'
 
 - script: dotnet pack $(PATH_PROJECT) -c $(buildConfiguration) -o out
   displayName: 'dotnet pack'
