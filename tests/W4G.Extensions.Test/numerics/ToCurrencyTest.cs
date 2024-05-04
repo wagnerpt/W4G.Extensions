@@ -14,6 +14,7 @@ namespace W4G.Test
         [TestMethod]
         public void ToCurrencyInt()
         {
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
             Assert.AreEqual("R$ 12.345,00", 12345.ToCurrency());
             Assert.AreEqual("R$ 12.345,000", 12345.ToCurrency(3));
             Assert.AreEqual("$12,345.00", 12345.ToCurrency(cultureName: "en-US"));
