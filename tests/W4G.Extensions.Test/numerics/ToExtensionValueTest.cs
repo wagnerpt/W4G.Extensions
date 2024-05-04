@@ -1,3 +1,4 @@
+using System.Globalization;
 using W4G.Extensions;
 
 namespace W4G.Test
@@ -5,6 +6,11 @@ namespace W4G.Test
     [TestClass]
     public class ToExtensionValueTest
     {
+        public ToExtensionValueTest()
+        {
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+        }
+
         [TestMethod]
         public void ToExtension()
         {
