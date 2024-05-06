@@ -9,14 +9,15 @@ on:
   pull_request:
     branches: [ "master" ]
   workflow_dispatch:
-    branches: [ "master" ]
+  
 jobs:
   build:
 
     runs-on: ubuntu-latest
     env:
       PATH_PROJECT: ./src/W4G.Extensions/W4G.Extensions.csproj
-
+      NUGET_SERVER:  ${{ secrets.NUGET_SERVER }}
+      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }} 
     steps:
     - uses: actions/checkout@v4
     - name: Setup .NET
@@ -30,7 +31,12 @@ jobs:
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
     - name: Echo
-      run: echo ${{ secrets.NUGET_SERVER }}
+      run: |
+        echo "teste"
+        echo 1 ${{ secrets.NUGET_SERVER }}
+        echo 2 ${{ env.NUGET_SERVER }}
+        echo 3 ${{ env.PATH_PROJECT }}
+        echo 4 $PATH_PROJECT
     - name: Geração do package
       run: dotnet pack ${{ env.PATH_PROJECT }} -c Release -o out
     - name: Push no NuGet
