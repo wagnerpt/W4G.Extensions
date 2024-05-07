@@ -1,4 +1,4 @@
-name: CI/CD NuGet
+name: Tests
 
 on:
   push:
