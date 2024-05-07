@@ -10,21 +10,21 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  buildConfiguration: 'Release'
+  buildConfiguration: 'Debug'
   PATH_PROJECT: ./src/W4G.Extensions/W4G.Extensions.csproj
 
 steps:
-- script: dotnet restore
-  displayName: 'dotnet restore'
+#- script: dotnet restore
+#  displayName: 'dotnet restore'
 
-- script: dotnet build --configuration $(buildConfiguration) --no-restore
-  displayName: 'dotnet build $(buildConfiguration)'
+#- script: dotnet build --configuration $(buildConfiguration) --no-restore
+#  displayName: 'dotnet build $(buildConfiguration)'
 
 - script: dotnet test --verbosity normal
   displayName: 'dotnet test'
 
-- script: dotnet pack $(PATH_PROJECT) -c $(buildConfiguration) -o out
-  displayName: 'dotnet pack'
+#- script: dotnet pack $(PATH_PROJECT) -c $(buildConfiguration) -o out
+#  displayName: 'dotnet pack'
 
-- script: dotnet nuget push out/*.nupkg --api-key $(NUGET_API_KEY) --source $(NUGET_SERVER) --skip-duplicate
-  displayName: 'nuget push'
+#- script: dotnet nuget push out/*.nupkg --api-key $(NUGET_API_KEY) --source $(NUGET_SERVER) --skip-duplicate
+#  displayName: 'nuget push'
