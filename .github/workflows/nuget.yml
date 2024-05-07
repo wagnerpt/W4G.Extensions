@@ -17,6 +17,7 @@ jobs:
     - uses: actions/checkout@v4
     - name: Definir configuração regional sem verificar atualizações
       run: |
+        sudo apt install locales
         sudo locale-set --no-check-update pt_BR.UTF-8
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
