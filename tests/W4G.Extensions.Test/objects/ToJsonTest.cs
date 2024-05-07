@@ -17,10 +17,10 @@ public class ToJsonTest
     [TestMethod]
     public void ToJsonObjects()
     {
-        Assert.AreEqual("{\"nome\":\"Jo„o da Silva\"}", new { nome = "Jo„o da Silva" }.ToJson());
-        
-        var ret = new { nome = "Jo„o", sobrenome = "Silva", endereco = new { rua = "Rua Um", numero = "2", cep = "00001-001" } }.ToJson();
-        Assert.AreEqual("{\"nome\":\"Jo„o\",\"sobrenome\":\"Silva\",\"endereco\":{\"rua\":\"Rua Um\",\"numero\":\"2\",\"cep\":\"00001-001\"}}", ret);
+        Assert.AreEqual("{\"nome\":\"Jo√£o da Silva\"}", new { nome = "Jo√£o da Silva" }.ToJson());
+
+        var ret = new { nome = "Jo√£o", sobrenome = "Silva", endereco = new { rua = "Rua Um", numero = "2", cep = "00001-001" } }.ToJson();
+        Assert.AreEqual("{\"nome\":\"Jo√£o\",\"sobrenome\":\"Silva\",\"endereco\":{\"rua\":\"Rua Um\",\"numero\":\"2\",\"cep\":\"00001-001\"}}", ret);
     }
 
 }

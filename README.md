@@ -9,17 +9,18 @@ Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos ú
 ## Recursos Disponíveis (em constante atualização)
 
 
-### Extensões para documentos ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-documentos))
+**Extensões para documentos** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-documentos))
 - **CPF**: [CpfIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfIsValid), [CpfCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfCorrect), [CpfFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfFormat).
 - **CNPJ**: [CnpjIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjIsValid), [CnpjCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjCorrect), [CnpjFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjFormat).
 
-### Extensões para Serialização ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-Serializa%C3%A7%C3%A3o))
-[ToJson](https://github.com/wagnerpt/W4G.Extensions/wiki/ToJson), [ToXml](https://github.com/wagnerpt/W4G.Extensions/wiki/ToXml).
+**Extensões para Serialização** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-Serializa%C3%A7%C3%A3o))
+- **Json**: [ToJson](https://github.com/wagnerpt/W4G.Extensions/wiki/ToJson), [ToJsonFile](https://github.com/wagnerpt/W4G.Extensions/wiki/ToJson).
+- **XML**: [ToXml](https://github.com/wagnerpt/W4G.Extensions/wiki/ToXml), [ToXmlFile](https://github.com/wagnerpt/W4G.Extensions/wiki/ToXml).
 
-### Extensões para Números ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-N%C3%BAmeros))
+**Extensões para Números** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-N%C3%BAmeros))
 [ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency), [ToExtensionMoneyBRL](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionMoneyBRL), [ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR).
 
-### Extensões para Strings ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-Strings))
+**Extensões para Strings** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-Strings))
 [NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents), [OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers).
 
 ## Como Utilizar

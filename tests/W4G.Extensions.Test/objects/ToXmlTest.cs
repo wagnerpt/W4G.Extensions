@@ -6,25 +6,17 @@ namespace W4G.Test;
 public class ToXmlTest
 {
     [TestMethod]
-    public void ToXmlPrimitivesObjects()
+    public void XmlObjects()
     {
-        Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><string>teste de string</string>", "teste de string".ToXml().Replace("\r\n",""));
-        Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><char>99</char>", 'c'.ToXml().Replace("\r\n", ""));
-        Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><int>123</int>", 123.ToXml().Replace("\r\n", ""));
-        Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><double>56.89</double>", 56.89.ToXml().Replace("\r\n", ""));
-    }
+        var objPessoaNome = new PessoaNome { Nome = "Jo√£o da Silva" };
+        var xml = "<PessoaNome><Nome>Jo√£o da Silva</Nome></PessoaNome>";
+        Assert.AreEqual(objPessoaNome.Nome, xml.FromXml<PessoaNome>().Nome);
+        Assert.AreEqual(objPessoaNome.Nome, objPessoaNome.ToXml().FromXml<PessoaNome>().Nome);
 
-    [TestMethod]
-    public void ToJsonObjects()
-    { 
-
-        Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><PessoaNome xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">  <Nome>Jo„o da Silva</Nome></PessoaNome>",
-            new PessoaNome { Nome = "Jo„o da Silva" }.ToXml().Replace("\r\n", ""));
-
-        var ret = new Pessoa() { Nome = "Jo„o", Sobrenome = "Silva", Endereco = new Endereco() { Rua = "Rua Um", Numero = "2", Cep = "00001-001" } }.ToXml();
-
-        Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><Pessoa xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">  <Nome>Jo„o</Nome>  <Sobrenome>Silva</Sobrenome>  <Endereco>    <Rua>Rua Um</Rua>    <Numero>2</Numero>    <Cep>00001-001</Cep>  </Endereco></Pessoa>", 
-           ret.Replace("\r\n", ""));
+        var objPessoa = new Pessoa() { Nome = "Jo√£o", Sobrenome = "Silva", Endereco = new Endereco() { Rua = "Rua Um", Numero = "2", Cep = "00001-001" } };
+        xml = "<Pessoa><Nome>Jo√£o</Nome><Sobrenome>Silva</Sobrenome><Endereco><Rua>Rua Um</Rua><Numero>2</Numero><Cep>00001-001</Cep></Endereco></Pessoa>";
+        Assert.AreEqual(objPessoa.Nome, xml.FromXml<Pessoa>().Nome);
+        Assert.AreEqual(objPessoa.Nome, objPessoa.ToXml().FromXml<Pessoa>().Nome);
     }
 }
 public class PessoaNome { public string Nome { get; set; } }

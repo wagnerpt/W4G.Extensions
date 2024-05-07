@@ -1,8 +1,11 @@
-name: CI/CD NuGet
+name: Tests
 
 on:
   push:
     branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+  workflow_dispatch:
   
 jobs:
   build:
@@ -24,9 +27,3 @@ jobs:
       run: dotnet build -c Debug --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - name: Build Release
-      run: dotnet build -c Release --no-restore
-    - name: Geração do package
-      run: dotnet pack ${{ env.PATH_PROJECT }} -c Release -o out
-    - name: Push no NuGet
-      run: dotnet nuget push ./out/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_SERVER }} --skip-duplicate

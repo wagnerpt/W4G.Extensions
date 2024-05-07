@@ -1,8 +1,14 @@
-﻿v1.0.4
+﻿v1.0.5
+======
+  * Inclusão de sobrecargas do método `ToJson`
+  * Inclusão do método `ToJsonFile` para converter um objeto em uma string JSON e salvar em arquivo
+  * Inclusão do Método `ToXmlFile` para converter um objeto em uma string XML e salvar em arquivo
+
+v1.0.4
 ======
   * Inclusão do método `ToJson` para converter um objeto em uma string JSON
   * Inclusão do Método `ToXml` para converter um objeto em uma string XML
-  
+
 v1.0.3
 ======
   * Inclusão de métodos para CPF (validação e formatação)
