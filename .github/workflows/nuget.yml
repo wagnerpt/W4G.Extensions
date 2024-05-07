@@ -15,6 +15,9 @@ jobs:
       PATH_PROJECT: ./src/W4G.Extensions/W4G.Extensions.csproj
     steps:
     - uses: actions/checkout@v4
+    - name: Definir configuração regional sem verificar atualizações
+      run: |
+        sudo locale-set --no-check-update pt_BR.UTF-8
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
@@ -23,8 +26,8 @@ jobs:
       run: dotnet restore 
     - name: Build
       run: dotnet build -c Release --no-restore
-#    - name: Test
-#      run: dotnet test --no-build --verbosity normal
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
     - name: Geração do package
       run: dotnet pack ${{ env.PATH_PROJECT }} -c Release -o out
     - name: Push no NuGet
