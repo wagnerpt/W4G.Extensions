@@ -38,7 +38,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove", result);
+            Assert.AreEqual("cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove", result);
         }
 
         [TestMethod]
@@ -77,7 +77,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("um milhão", result);
+            Assert.AreEqual("um milhÃ£o", result);
         }
 
         [TestMethod]
@@ -87,7 +87,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("um bilhão", result);
+            Assert.AreEqual("um bilhÃ£o", result);
         }
 
         [TestMethod]
@@ -97,7 +97,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("um trilhão", result);
+            Assert.AreEqual("um trilhÃ£o", result);
         }
 
         [TestMethod]
@@ -107,7 +107,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("um quadrilhão", result);
+            Assert.AreEqual("um quadrilhÃ£o", result);
         }
 
         [TestMethod]
@@ -117,7 +117,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("um quintilhão", result);
+            Assert.AreEqual("um quintilhÃ£o", result);
         }
 
         [TestMethod]
@@ -127,43 +127,43 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove", result);
+            Assert.AreEqual("cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove", result);
         }
 
         [TestMethod]
         public void Double()
         {
-            Assert.AreEqual("zero vírgula um décimo", 0.1.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula um centésimo", 0.01.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula um milésimo", 0.001.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula um décimo de milésimo", 0.0001.ToExtensionValueBR());
-            Assert.AreEqual("um vírgula um centésimo de milésimo", 1.00001.ToExtensionValueBR());
-            Assert.AreEqual("doze vírgula um milionésimo", 12.000001.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula cento e vinte e três décimos de milésimos", 0.0123.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula mil e duzentos e trinta e quatro milionésimos", 0.001234.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula doze centésimos", 0.12.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula cento e vinte e três milésimos", 0.123.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula mil e duzentos e trinta e quatro décimos de milésimos", 0.1234.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula doze mil e trezentos e quarenta e cinco centésimos de milésimos", 0.12345.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula cento e vinte e três mil e quatrocentos e cinquenta e seis milionésimos", 0.123456.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um dÃ©cimo", 0.1.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um centÃ©simo", 0.01.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um milÃ©simo", 0.001.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um dÃ©cimo de milÃ©simo", 0.0001.ToExtensionValueBR());
+            Assert.AreEqual("um vÃ­rgula um centÃ©simo de milÃ©simo", 1.00001.ToExtensionValueBR());
+            Assert.AreEqual("doze vÃ­rgula um milionÃ©simo", 12.000001.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula cento e vinte e trÃªs dÃ©cimos de milÃ©simos", 0.0123.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula mil e duzentos e trinta e quatro milionÃ©simos", 0.001234.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula doze centÃ©simos", 0.12.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula cento e vinte e trÃªs milÃ©simos", 0.123.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula mil e duzentos e trinta e quatro dÃ©cimos de milÃ©simos", 0.1234.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula doze mil e trezentos e quarenta e cinco centÃ©simos de milÃ©simos", 0.12345.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula cento e vinte e trÃªs mil e quatrocentos e cinquenta e seis milionÃ©simos", 0.123456.ToExtensionValueBR());
         }
 
         [TestMethod]
         public void Decimal()
         {
-            Assert.AreEqual("zero vírgula um décimo", 0.1m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula um centésimo", 0.01m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula um milésimo", 0.001m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula um décimo de milésimo", 0.0001m.ToExtensionValueBR());
-            Assert.AreEqual("um vírgula um centésimo de milésimo", 1.00001m.ToExtensionValueBR());
-            Assert.AreEqual("doze vírgula um milionésimo", 12.000001m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula cento e vinte e três décimos de milésimos", 0.0123m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula mil e duzentos e trinta e quatro milionésimos", 0.001234m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula doze centésimos", 0.12m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula cento e vinte e três milésimos", 0.123m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula mil e duzentos e trinta e quatro décimos de milésimos", 0.1234m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula doze mil e trezentos e quarenta e cinco centésimos de milésimos", 0.12345m.ToExtensionValueBR());
-            Assert.AreEqual("zero vírgula cento e vinte e três mil e quatrocentos e cinquenta e seis milionésimos", 0.123456m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um dÃ©cimo", 0.1m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um centÃ©simo", 0.01m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um milÃ©simo", 0.001m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula um dÃ©cimo de milÃ©simo", 0.0001m.ToExtensionValueBR());
+            Assert.AreEqual("um vÃ­rgula um centÃ©simo de milÃ©simo", 1.00001m.ToExtensionValueBR());
+            Assert.AreEqual("doze vÃ­rgula um milionÃ©simo", 12.000001m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula cento e vinte e trÃªs dÃ©cimos de milÃ©simos", 0.0123m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula mil e duzentos e trinta e quatro milionÃ©simos", 0.001234m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula doze centÃ©simos", 0.12m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula cento e vinte e trÃªs milÃ©simos", 0.123m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula mil e duzentos e trinta e quatro dÃ©cimos de milÃ©simos", 0.1234m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula doze mil e trezentos e quarenta e cinco centÃ©simos de milÃ©simos", 0.12345m.ToExtensionValueBR());
+            Assert.AreEqual("zero vÃ­rgula cento e vinte e trÃªs mil e quatrocentos e cinquenta e seis milionÃ©simos", 0.123456m.ToExtensionValueBR());
         }
 
         [TestMethod]
@@ -173,7 +173,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove vírgula cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove bilionésimos", result);
+            Assert.AreEqual("cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove vÃ­rgula cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove bilionÃ©simos", result);
         }
 
         [TestMethod]
@@ -183,7 +183,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR(false);
 
-            Assert.AreEqual("cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove inteiros e cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove bilionésimos", result);
+            Assert.AreEqual("cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove inteiros e cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove bilionÃ©simos", result);
         }
 
         [TestMethod]
@@ -193,7 +193,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("menos cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove vírgula cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove bilionésimos", result);
+            Assert.AreEqual("menos cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove vÃ­rgula cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove bilionÃ©simos", result);
         }
 
         [TestMethod]
@@ -223,7 +223,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("um vírgula um décimo", result);
+            Assert.AreEqual("um vÃ­rgula um dÃ©cimo", result);
         }
 
         [TestMethod]
@@ -233,7 +233,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("menos um vírgula um décimo", result);
+            Assert.AreEqual("menos um vÃ­rgula um dÃ©cimo", result);
         }
 
         [TestMethod]
@@ -243,7 +243,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR();
 
-            Assert.AreEqual("cento e vinte e três milhões e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove vírgula doze milhões e trezentos e quarenta e cinco mil e seiscentos e setenta e oito centésimos de milionésimos", result);
+            Assert.AreEqual("cento e vinte e trÃªs milhÃµes e quatrocentos e cinquenta e seis mil e setecentos e oitenta e nove vÃ­rgula doze milhÃµes e trezentos e quarenta e cinco mil e seiscentos e setenta e oito centÃ©simos de milionÃ©simos", result);
         }
 
         [TestMethod]
@@ -253,7 +253,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR(false);
 
-            Assert.AreEqual("um inteiro e um décimo", result);
+            Assert.AreEqual("um inteiro e um dÃ©cimo", result);
         }
 
         [TestMethod]
@@ -263,7 +263,7 @@ namespace W4G.Test
 
             var result = value.ToExtensionValueBR(false);
 
-            Assert.AreEqual("duzentos e trinta e um inteiros e doze centésimos", result);
+            Assert.AreEqual("duzentos e trinta e um inteiros e doze centÃ©simos", result);
         }
     }
 }

@@ -10,9 +10,9 @@ namespace W4G.Test
         [TestMethod]
         public void NoAccents()
         {
-            NoAccents("aeiouc$&aAj", "·ÈÌÛ˙Á$&aAj");
-            NoAccents("Joao", "Jo„o");
-            NoAccents("Acucar", "AÁucar");
+            NoAccents("aeiouc$&aAj", "√°√©√≠√≥√∫√ß$&aAj");
+            NoAccents("Joao", "Jo√£o");
+            NoAccents("Acucar", "A√ßucar");
         }
 
         [TestMethod]

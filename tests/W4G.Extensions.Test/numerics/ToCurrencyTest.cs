@@ -9,24 +9,28 @@ namespace W4G.Test
         public ToCurrencyTest()
         {
             CultureInfo.CurrentCulture = new CultureInfo("pt-BR");
+            CultureInfo.CurrentUICulture = new CultureInfo("pt-BR");
         }
 
         [TestMethod]
         public void ToCurrencyInt()
         {
             CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
-            Assert.AreEqual("R$ 12.345,00", 12345.ToCurrency());
-            Assert.AreEqual("R$ 12.345,000", 12345.ToCurrency(3));
+            Assert.AreEqual("R$ 12.345,00", 12345.ToCurrency(cultureName: "pt-BR"));
+            Assert.AreEqual("R$ 12.345,000", 12345.ToCurrency(3, cultureName: "pt-BR"));
             Assert.AreEqual("$12,345.00", 12345.ToCurrency(cultureName: "en-US"));
 
-            Assert.AreEqual("-R$ 12.345,00", (-12345).ToCurrency());
-            Assert.AreEqual("-R$ 12.345,000", (-12345).ToCurrency(3));
+            Assert.AreEqual("-R$ 12.345,00", (-12345).ToCurrency(cultureName: "pt-BR"));
+            Assert.AreEqual("-R$ 12.345,000", (-12345).ToCurrency(3, cultureName: "pt-BR"));
             Assert.AreEqual("-$12,345.00", (-12345).ToCurrency(cultureName: "en-US"));
         }
 
         [TestMethod]
         public void ToCurrencyLong()
         {
+            CultureInfo.CurrentUICulture = new CultureInfo("pt-BR");
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+            CultureInfo.CurrentCulture = new CultureInfo("pt-BR");
             Assert.AreEqual("R$ 12.345,00", ((long)12345).ToCurrency());
             Assert.AreEqual("R$ 12.345,000", ((long)12345).ToCurrency(3));
             Assert.AreEqual("$12,345.00", ((long)12345).ToCurrency(cultureName: "en-US"));
