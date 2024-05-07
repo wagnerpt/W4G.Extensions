@@ -15,16 +15,16 @@ public class ToXmlTest
     }
 
     [TestMethod]
-    public void ToJsonObjects()
+    public void ToXmlObjects()
     {
 
         Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><PessoaNome xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">  <Nome>João da Silva</Nome></PessoaNome>",
-            new PessoaNome { Nome = "João da Silva" }.ToXml().Replace("\r\n", ""));
+            new PessoaNome { Nome = "João da Silva" }.ToXml().Replace("\r\n", "").Replace("\r", "").Replace("\n", ""));
 
         var ret = new Pessoa() { Nome = "João", Sobrenome = "Silva", Endereco = new Endereco() { Rua = "Rua Um", Numero = "2", Cep = "00001-001" } }.ToXml();
 
         Assert.AreEqual("<?xml version=\"1.0\" encoding=\"utf-16\"?><Pessoa xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">  <Nome>João</Nome>  <Sobrenome>Silva</Sobrenome>  <Endereco>    <Rua>Rua Um</Rua>    <Numero>2</Numero>    <Cep>00001-001</Cep>  </Endereco></Pessoa>",
-           ret.Replace("\r\n", ""));
+           ret.Replace("\r\n", "").Replace("\r", "").Replace("\n", ""));
     }
 }
 public class PessoaNome { public string Nome { get; set; } }
