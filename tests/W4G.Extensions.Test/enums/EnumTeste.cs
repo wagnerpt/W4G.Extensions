@@ -10,4 +10,10 @@ namespace W4G.Extensions.Test.enums
 
         Elefant = 2
     }
+
+    public enum Status
+    {
+        Active,
+        Inactive
+    }
 }
