@@ -6,6 +6,8 @@ namespace W4G.Extensions.Test.enums
         Undefined = 0,
 
         [System.ComponentModel.Description("Gato")]
-        Cat = 1
+        Cat = 1,
+
+        Elefant = 2
     }
 }

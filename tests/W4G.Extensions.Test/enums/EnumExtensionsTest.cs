@@ -8,9 +8,11 @@ namespace W4G.Extensions.Test.enums
         {
             var resultEnumCat = EnumTeste.Cat.GetDescription();
             var resultEnumIndefinido = EnumTeste.Undefined.GetDescription();
+            var resultDescriptionNull = EnumTeste.Elefant.GetDescription();
 
             Assert.AreEqual(resultEnumCat, "Gato");
             Assert.AreEqual(resultEnumIndefinido, "Indefinido");
+            Assert.AreEqual(string.Empty, resultDescriptionNull);
         }
 
         [TestMethod]

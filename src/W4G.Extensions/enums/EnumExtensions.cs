@@ -13,12 +13,12 @@ namespace W4G.Extensions
         /// </summary>
         /// <param name="value">Enum com <see cref="DescriptionAttribute"/> descriçaõ</param>
         /// <returns>A descrição do valor de Enum.</returns>
-        static public string GetDescription(this Enum value) =>
-            value
-                .GetType()
-                .GetField(value.ToString())
-                .GetCustomAttribute<DescriptionAttribute>()
-                .Description;
+        static public string GetDescription(this Enum value)
+        {
+            var field = value.GetType().GetField(value.ToString());
+            var descriptionAttribute = field?.GetCustomAttribute<DescriptionAttribute>();
+            return descriptionAttribute?.Description ?? string.Empty;
+        }
 
         /// <summary>
         /// Verifica se o enum especificado, <paramref name="object"/>, é um membro válido do Enum.
@@ -33,11 +33,17 @@ namespace W4G.Extensions
             bool acceptUndefined = true,
             string undefinedEnumName = "Undefined")
         {
+            if (@object == null)
+            {
+                return false;
+            }
+
             var validEnum = Enum.IsDefined(typeof(TEnum), @object) && !@object.Equals(default(Enum));
             if (validEnum && !acceptUndefined)
             {
                 return !@object.ToString().Equals(undefinedEnumName);
             }
+
             return validEnum;
         }
     }
