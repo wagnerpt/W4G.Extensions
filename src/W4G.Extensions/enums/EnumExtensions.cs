@@ -46,5 +46,26 @@ namespace W4G.Extensions
 
             return validEnum;
         }
+
+        /// <summary>
+        /// Verifica se um valor específico existe em um enum.
+        /// </summary>
+        /// <typeparam name="TEnum">O tipo do enum.</typeparam>
+        /// <param name="value">O valor a ser verificado.</param>
+        /// <returns>True se o valor existir no enum, caso contrário false.</returns>
+        public static bool HasValue<TEnum>(this TEnum value) where TEnum : Enum
+        {
+            return Enum.IsDefined(typeof(TEnum), value);
+        }
+
+        /// <summary>
+        /// Converte um enum em uma lista de seus valores.
+        /// </summary>
+        /// <typeparam name="Enum">O tipo do enum.</typeparam>
+        /// <returns>Uma lista contendo os valores do enum.</returns>
+        public static List<TEnum> ToList<TEnum>()
+        {
+            return Enum.GetValues(typeof(TEnum)).Cast<TEnum>().ToList();
+        }
     }
 }
