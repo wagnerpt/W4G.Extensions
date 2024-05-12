@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 
 namespace W4G.Extensions;
 
-public static class ToXmlExtensions
+public static class XmlExtensions
 {
     /// <summary>
     /// Serializa o objeto especificado em uma string XML.
@@ -26,7 +26,7 @@ public static class ToXmlExtensions
     /// <typeparam name="T">O tipo objeto a ser serializado</typeparam>
     /// <param name="value">O objeto a ser serializado.</param>
     /// <param name="path">O arquivo onde será gravado</param>
-    public static void ToJsonFile<T>(this T value, string path)
+    public static void ToXmlFile<T>(this T value, string path)
     {
         File.WriteAllText(path, value.ToXml());
     }
@@ -38,7 +38,7 @@ public static class ToXmlExtensions
     /// <param name="value">O objeto a ser serializado.</param>
     /// <param name="path">O arquivo onde será gravado</param>
     /// <param name="encoding">A codificação a ser aplicada à string.</param>
-    public static void ToJsonFile<T>(this T value, string path, Encoding encoding)
+    public static void ToXmlFile<T>(this T value, string path, Encoding encoding)
     {
         File.WriteAllText(path, value.ToXml(), encoding);
     }

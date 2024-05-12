@@ -1,4 +1,11 @@
-﻿v1.0.5
+﻿v1.0.6
+======
+  * Inclusão de métodos para `Enum` (Description, IsValid, HasValue, ToList)
+  * Inclusão do Método `FromXml` para converter uma string XML em objeto
+  * Inclusão do Método `FromJson` para converter uma string JSON em objeto
+  * Inclusão do Método `AreEquals` para efetuar a comparação de objetos sem a necessidade de implementar o método `Equals`
+
+v1.0.5
 ======
   * Inclusão de sobrecargas do método `ToJson`
   * Inclusão do método `ToJsonFile` para converter um objeto em uma string JSON e salvar em arquivo

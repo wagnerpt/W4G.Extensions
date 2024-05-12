@@ -8,20 +8,26 @@ Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos ú
 
 ## Recursos Disponíveis (em constante atualização)
 
+#### **Extensões para Documentos** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#documentos))
 
-**Extensões para documentos** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-documentos))
 - **CPF**: [CpfIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfIsValid), [CpfCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfCorrect), [CpfFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfFormat).
 - **CNPJ**: [CnpjIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjIsValid), [CnpjCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjCorrect), [CnpjFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjFormat).
 
-**Extensões para Serialização** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-Serializa%C3%A7%C3%A3o))
-- **Json**: [ToJson](https://github.com/wagnerpt/W4G.Extensions/wiki/ToJson), [ToJsonFile](https://github.com/wagnerpt/W4G.Extensions/wiki/ToJson).
-- **XML**: [ToXml](https://github.com/wagnerpt/W4G.Extensions/wiki/ToXml), [ToXmlFile](https://github.com/wagnerpt/W4G.Extensions/wiki/ToXml).
+#### **Extensões para Enums** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#enums))
+- [Description](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.Description), [IsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.IsValid), [HasValue](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.HasValue), [ToList](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.ToList).
 
-**Extensões para Números** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-N%C3%BAmeros))
-[ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency), [ToExtensionMoneyBRL](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionMoneyBRL), [ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR).
+#### **Extensões para Números** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#n%C3%BAmeros))
+- [ToCurrency](https://github.com/wagnerpt/W4G.Extensions/wiki/ToCurrency), [ToExtensionMoneyBRL](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionMoneyBRL), [ToExtensionValueBR](https://github.com/wagnerpt/W4G.Extensions/wiki/ToExtensionValueBR).
 
-**Extensões para Strings** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Extens%C3%B5es-para-Strings))
-[NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents), [OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers).
+#### **Extensões para Objects** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#objects))
+- [AreEquals](https://github.com/wagnerpt/W4G.Extensions/wiki/AreEquals).
+
+#### **Extensões para Serialização** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#serializa%C3%A7%C3%A3o))
+- **Json**: [FromJson](https://github.com/wagnerpt/W4G.Extensions/wiki/FromJson), [ToJson](https://github.com/wagnerpt/W4G.Extensions/wiki/ToJson), [ToJsonFile](https://github.com/wagnerpt/W4G.Extensions/wiki/ToJson).
+- **XML**: [FromXml](https://github.com/wagnerpt/W4G.Extensions/wiki/FromXml), [ToXml](https://github.com/wagnerpt/W4G.Extensions/wiki/ToXml), [ToXmlFile](https://github.com/wagnerpt/W4G.Extensions/wiki/ToXml).
+
+#### **Extensões para Strings** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#strings))
+- [NoAccents](https://github.com/wagnerpt/W4G.Extensions/wiki/NoAccents), [OnlyNumbers](https://github.com/wagnerpt/W4G.Extensions/wiki/OnlyNumbers).
 
 ## Como Utilizar
 
