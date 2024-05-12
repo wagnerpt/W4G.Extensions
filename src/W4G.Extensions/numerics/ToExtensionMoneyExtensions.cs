@@ -81,7 +81,7 @@ public static class ToExtensionMoneyExtensions
     /// </summary>
     /// <param name="number">Valor inteiro a ser formatado</param>
     /// <returns>Valor em reais por extenso</returns>
-    public static string ToExtensionMoneyBRL(this decimal number, bool popularText = true)
+    public static string ToExtensionMoneyBRL(this decimal number)
     {
         decimal parteInteira = Math.Truncate(number);
         string ret = ToExtensionMoneyBRL((long)parteInteira);

@@ -15,7 +15,7 @@ public static class ToCurrencyExtensions
     /// <param name="decimalPlaces">Informe o número de casas decimais, se não informado assume o padrão da moeda.</param>
     /// <param name="cultureName">Informe o nome da cultura. Ex. pt-br, en-US. Se não informado assume o padrão conforme o CurrentUICulture.</param>
     /// <returns>Retorna a string no formato de moeda</returns>
-    public static string ToCurrency(this int value, int? decimalPlaces = null, string? cultureName = null)
+    public static string ToCurrency(this int value, int? decimalPlaces = null, string cultureName = null)
     {
         CultureInfo cultureInfo = new CultureInfo(cultureName ?? CultureInfo.CurrentUICulture.Name);
         string mask = $"C{decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits}";
@@ -29,7 +29,7 @@ public static class ToCurrencyExtensions
     /// <param name="decimalPlaces">Informe o número de casas decimais, se não informado assume o padrão da moeda.</param>
     /// <param name="cultureName">Informe o nome da cultura. Ex. pt-br, en-US. Se não informado assume o padrão conforme o CurrentUICulture.</param>
     /// <returns>Retorna a string no formato de moeda</returns>
-    public static string ToCurrency(this long value, int? decimalPlaces = null, string? cultureName = null)
+    public static string ToCurrency(this long value, int? decimalPlaces = null, string cultureName = null)
     {
         CultureInfo cultureInfo = new CultureInfo(cultureName ?? CultureInfo.CurrentUICulture.Name);
         string mask = $"C{decimalPlaces ?? cultureInfo.NumberFormat.CurrencyDecimalDigits}";
@@ -44,7 +44,7 @@ public static class ToCurrencyExtensions
     /// <param name="truncValue">Informe "true" se deseja truncar o valor ou "false" se aceitar o arredondamento</param>
     /// <param name="cultureName">Informe o nome da cultura. Ex. pt-br, en-US. Se não informado assume o padrão conforme o CurrentUICulture.</param>
     /// <returns>Retorna a string no formato de moeda</returns>
-    public static string ToCurrency(this double value, int? decimalPlaces = null, bool truncValue = false, string? cultureName = null)
+    public static string ToCurrency(this double value, int? decimalPlaces = null, bool truncValue = false, string cultureName = null)
     {
         CultureInfo cultureInfo = new CultureInfo(cultureName ?? CultureInfo.CurrentUICulture.Name);
 
@@ -64,7 +64,7 @@ public static class ToCurrencyExtensions
     /// <param name="truncValue">Informe "true" se deseja truncar o valor ou "false" se aceitar o arredondamento</param>
     /// <param name="cultureName">Informe o nome da cultura. Ex. pt-br, en-US. Se não informado assume o padrão conforme o CurrentUICulture.</param>
     /// <returns>Retorna a string no formato de moeda</returns>
-    public static string ToCurrency(this decimal value, int? decimalPlaces = null, bool truncValue = false, string? cultureName = null)
+    public static string ToCurrency(this decimal value, int? decimalPlaces = null, bool truncValue = false, string cultureName = null)
     {
         CultureInfo cultureInfo = new CultureInfo(cultureName ?? CultureInfo.CurrentUICulture.Name);
 
