@@ -23,4 +23,11 @@ public class ToJsonTest
         Assert.AreEqual("{\"nome\":\"João\",\"sobrenome\":\"Silva\",\"endereco\":{\"rua\":\"Rua Um\",\"numero\":\"2\",\"cep\":\"00001-001\"}}", ret);
     }
 
+    [TestMethod]
+    public void FromJson()
+    {
+        var json = "{\"Nome\":\"João\",\"Sobrenome\":\"Silva\",\"Endereco\":{\"Rua\":\"Rua Um\",\"Numero\":\"2\",\"Cep\":\"00001-001\"}}";
+        var obj = new Pessoa() { Nome = "João", Sobrenome = "Silva", Endereco = new Endereco() { Rua = "Rua Um", Numero = "2", Cep = "00001-001" } };
+        Assert.IsTrue(obj.AreEquals(json.FromJson<Pessoa>()));
+    }
 }
