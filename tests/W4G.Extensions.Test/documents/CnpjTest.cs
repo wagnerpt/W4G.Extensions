@@ -10,7 +10,9 @@ public class CnpjTest
     public void CnpjFormat()
     {
         Assert.AreEqual("89.539.598/0001-03", "89539598000103".CnpjFormat());
+        Assert.AreEqual("12.ABC.345/01DE–35", "12ABC34501DE35".CnpjFormat());
         Assert.ThrowsException<ArgumentException>(() => "89539598000104".CnpjFormat());
+        Assert.ThrowsException<ArgumentException>(() => "12ABC34501DE36".CnpjFormat());
     }
 
     [TestMethod]
@@ -21,6 +23,8 @@ public class CnpjTest
         Assert.AreEqual(false, "89539598000104".CnpjIsValid());
         Assert.AreEqual(false, "999999999999".CnpjIsValid());
         Assert.AreEqual(false, "89539598000103A".CnpjIsValid());
+        Assert.AreEqual(true, "12ABC34501DE35".CnpjIsValid());
+        Assert.AreEqual(true, "A2ABC34501DE35".CnpjIsValid());
     }
 
     [TestMethod]
@@ -29,6 +33,7 @@ public class CnpjTest
         Assert.AreEqual("89539598000103", "89539598000103".CnpjCorrect());
         Assert.AreEqual("89539598000103", "89.539.598/0001-03".CnpjCorrect());
         Assert.AreEqual("89539598000103", "89539598000104".CnpjCorrect());
-        Assert.AreEqual("89539598000103", "89539598000103A".CnpjCorrect());
+        Assert.AreEqual("89539598000103", "8953959800010A".CnpjCorrect());
+        Assert.AreEqual("12ABC34501DE35", "12.ABC.345/01DE–35".CnpjCorrect());
     }
 }
