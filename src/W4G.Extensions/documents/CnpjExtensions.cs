@@ -5,9 +5,11 @@ namespace W4G.Extensions.documents;
 public static class CnpjExtensions
 {
     #region private
+    private static bool CnpjAlfa = DateTime.Today >= new DateTime(2026, 7, 1);
+
     private static int CalcDigits(string CNPJ)
     {
-        var cnpj = CNPJ.OnlyNumbers().PadLeft(14, '0');
+        var cnpj = (CnpjAlfa ? CNPJ.OnlyAlphanumeric(): CNPJ.OnlyNumbers()).PadLeft(14, '0').ToUpper();
 
         if (cnpj.Length != 14)
             throw new ArgumentException("CNPJ deve conter 14 dígitos");
@@ -18,14 +20,14 @@ public static class CnpjExtensions
         int soma = 0;
         //Calcula o primeiro dígito verificador
         for (int i = 0; i < 12; i++)
-            soma += int.Parse(cnpj[i].ToString()) * multiplicadores1[i];
+            soma += (cnpj[i] - 48) * multiplicadores1[i];
         int resto = soma % 11;
         int digitoVerificador1 = resto < 2 ? 0 : 11 - resto;
 
         soma = 0;
         //Calcula o segundo dígito verificador
         for (int i = 0; i < 13; i++)
-            soma += int.Parse(cnpj[i].ToString()) * multiplicadores2[i];
+            soma += (cnpj[i] - 48) * multiplicadores2[i];
         resto = soma % 11;
         int digitoVerificador2 = resto < 2 ? 0 : 11 - resto;
 
@@ -38,13 +40,13 @@ public static class CnpjExtensions
         if (!CnpjIsValid(CNPJ))
             throw new ArgumentException("Cnpj Inválido");
 
-        return Regex.Replace(CNPJ.OnlyNumbers(), @"(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})", @"$1.$2.$3/$4-$5");
+        return Regex.Replace((CnpjAlfa ? CNPJ.OnlyAlphanumeric() : CNPJ.OnlyNumbers()), @"(\w{2})(\w{3})(\w{3})(\w{4})(\d{2})", @"$1.$2.$3/$4-$5");
     }
 
     public static bool CnpjIsValid(this string CNPJ)
     {
         var cnpj = CNPJ.Replace(".", "").Replace("-", "").Replace("/", "").PadLeft(14, '0');
-        var cnpjNumbers = CNPJ.OnlyNumbers().PadLeft(14, '0');
+        var cnpjNumbers = (CnpjAlfa ? CNPJ.OnlyAlphanumeric() : CNPJ.OnlyNumbers()).PadLeft(14, '0');
 
         if (cnpj.Length > 14 || cnpj != cnpjNumbers)
             return false;
@@ -54,7 +56,7 @@ public static class CnpjExtensions
 
     public static string CnpjCorrect(this string CNPJ)
     {
-        var cnpj = CNPJ.OnlyNumbers().PadLeft(14, '0');
+        var cnpj = (CnpjAlfa ? CNPJ.OnlyAlphanumeric() : CNPJ.OnlyNumbers()).PadLeft(14, '0');
         if (cnpj.Length > 14)
             throw new ArgumentException("CNPJ deve conter 14 dígitos");
         return $"{cnpj.Substring(0, 12)}{CalcDigits(cnpj).ToString("00")}";

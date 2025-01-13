@@ -15,5 +15,17 @@ namespace W4G.Extensions
                 return null;
             return Regex.Replace(value.ToString(), @"[^\d]", "");
         }
+
+        /// <summary>
+        /// Retorna somente os alfanuméricos contido em uma string
+        /// </summary>
+        /// <param name="value">Objeto com o valor em texto</param>
+        /// <returns>Texto contendo apenas alfanuméricos</returns>
+        public static string OnlyAlphanumeric(this string value)
+        {
+            if (value == null)
+                return null;
+            return Regex.Replace(value.ToString(), @"[^\w]", "");
+        }
     }
 }

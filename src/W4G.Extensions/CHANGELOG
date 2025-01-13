@@ -1,4 +1,8 @@
-﻿v1.0.6
+﻿v1.0.7
+======
+  * CNPJ contendo alfanuméricos que entrará em vigor em 01/07/2026 ([IN RFB nº 2119](http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=127567)).
+
+v1.0.6
 ======
   * Inclusão de métodos para `Enum` (Description, IsValid, HasValue, ToList)
   * Inclusão do Método `FromXml` para converter uma string XML em objeto
