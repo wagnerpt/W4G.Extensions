@@ -11,8 +11,14 @@ Atualmente em construção, o objetivo é fornecer uma biblioteca de recursos ú
 #### **Extensões para Documentos** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#documentos))
 
 - **CPF**: [CpfIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfIsValid), [CpfCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfCorrect), [CpfFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CpfFormat).
-- **CNPJ**: [CnpjIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjIsValid), [CnpjCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjCorrect), [CnpjFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjFormat).	
+- **CNPJ**: [CnpjIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjIsValid), [CnpjCorrect](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjCorrect), [CnpjFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CnpjFormat).
+	
 *Já preparado para o CNPJ contendo alfanuméricos que entrará em vigor em 01/07/2026 ([IN RFB nº 2119](http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=127567)).
+
+#### **Extensões para CEP** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#cep))
+- [CepInfo](https://github.com/wagnerpt/W4G.Extensions/wiki/CepInfo), [CepIsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/CepIsValid), [CepFormat](https://github.com/wagnerpt/W4G.Extensions/wiki/CepFormat).
+
+*Esta extensão utiliza a API [ViaCEP](https://viacep.com.br/) para obter informações sobre o CEP informado.
 
 #### **Extensões para Enums** ([detalhes](https://github.com/wagnerpt/W4G.Extensions/wiki/Methods#enums))
 - [Description](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.Description), [IsValid](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.IsValid), [HasValue](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.HasValue), [ToList](https://github.com/wagnerpt/W4G.Extensions/wiki/Enum.ToList).
