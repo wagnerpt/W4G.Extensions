@@ -1,4 +1,9 @@
-﻿v1.0.7
+﻿v1.1.0
+======
+  * Reestruturação do projeto e inclusão de namespaces
+  * Inclusão de métodos para CEP (estes métodos utilizam a API ([ViaCep](https://viacep.com.br/)).
+
+v1.0.7
 ======
   * CNPJ contendo alfanuméricos que entrará em vigor em 01/07/2026 ([IN RFB nº 2119](http://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=127567)).
 
